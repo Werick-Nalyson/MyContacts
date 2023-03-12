@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  db_mycontacts:
+    image: postgres
+    container_name: db_mycontacts
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=mycontacts
+
+  adminer:
+    image: adminer
+    container_name: mycontacts_adminer
+    ports:
+      - 8080:8080
